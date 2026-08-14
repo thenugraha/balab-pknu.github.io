@@ -28,11 +28,10 @@ nginx 게이트웨이 `port_12011.conf` → `127.0.0.1:4002` 연결됨 → **호
 - `src/styles/global.css` — 디자인 (색·폰트는 상단 `:root`)
 - `public/img/` — 이미지 (뉴스 `img/news/`, 구성원 사진 `img/people/`)
 
-## 배포 — Cloudflare Pages
-- Framework preset: **Astro**
-- Build command: `npm run build` (= `astro build`)
-- Output dir: `dist`
-- Custom domain: `balab.paz.works`
+## 배포 — GitHub Pages (자동)
+- `main` 브랜치에 push하면 GitHub Actions(`.github/workflows/deploy.yml`)가 빌드·배포합니다.
+- 커스텀 도메인: **https://balab.paz.works** (`public/CNAME` + name.com DNS의 `balab` CNAME → `ralbu85.github.io`)
+- 저장소 Settings → Pages → Source가 **GitHub Actions**로 되어 있어야 합니다.
 
 ## 남은 것
 - 프로필·구성원 사진 파일 넣기 — `public/img/people/`에 넣고 `photo` 필드 지정 (CONTENT.md 참고; placeholder는 이미 표시됨)
