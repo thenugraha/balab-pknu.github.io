@@ -1,0 +1,13 @@
+{
+  "year": 2026,
+  "status": "published",
+  "selected": false,
+  "title": "Explainable AI-based Root-Cause Diagnosis of Maritime Engine Anomalies with External Factors",
+  "authors": "M. Park, H. Kim, S. Lee, J. Lee",
+  "venue": "Computers & Industrial Engineering",
+  "url": "https://www.sciencedirect.com/science/article/abs/pii/S0360835226002299",
+  "tags": [
+    "maritime",
+    "xai"
+  ]
+}

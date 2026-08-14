@@ -1,0 +1,47 @@
+---
+import Base from "../layouts/Base.astro";
+import T from "../components/T.astro";
+import { getCollection } from "astro:content";
+
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const fmt = (d) => `${MONTHS[d.getUTCMonth()]} ${d.getUTCDate()}`;
+
+const all = (await getCollection("news")).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const years = [...new Set(all.map((n) => n.data.date.getUTCFullYear()))].sort((a, b) => b - a);
+const byYear = years.map((y) => ({ year: y, items: all.filter((n) => n.data.date.getUTCFullYear() === y) }));
+---
+
+<Base title="News" description="News and achievements from BALAB, Pukyong National University.">
+  <header class="page-head">
+    <div class="wrap">
+      <div class="sec-label"><T en="Lab updates" ko="연구실 소식" /></div>
+      <h1><T en="News" ko="소식" /></h1>
+    </div>
+  </header>
+
+  <section style="border-bottom:none; padding-top:20px">
+    <div class="wrap">
+      {byYear.map((g) => (
+        <div>
+          <div class="pub-year">{g.year}</div>
+          <ul class="news">
+            {g.items.map((n) => {
+              const imgs = n.data.images ?? (n.data.image ? [n.data.image] : []);
+              return (
+                <li id={n.slug}>
+                  <div class="news-line"><span class="d">{fmt(n.data.date)}</span><span class="news-title"><T en={n.data.title.en} ko={n.data.title.ko} /></span></div>
+                  <div class="news-text"><T en={n.data.en} ko={n.data.ko} html /></div>
+                  {imgs.length > 0 && (
+                    <div class={imgs.length > 1 ? "news-imgs multi" : "news-imgs"}>
+                      {imgs.map((src) => <img src={src} alt={n.data.title.en} loading="lazy" onerror="this.style.display='none'" />)}
+                    </div>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </section>
+</Base>

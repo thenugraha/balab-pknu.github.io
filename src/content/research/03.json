@@ -1,0 +1,11 @@
+{
+  "title": {
+    "en": "Data-Driven CBM & PHM",
+    "ko": "데이터 기반 CBM·PHM"
+  },
+  "blurb": {
+    "en": "We study Condition-Based Maintenance (CBM) and Prognostics & Health Management (PHM) from sensor and operational data, covering anomaly detection, fault diagnosis, and remaining-useful-life (RUL) prediction for machinery and marine engines. This is an emerging direction for the lab.",
+    "ko": "센서·운영 데이터를 활용한 상태기반정비(CBM)와 고장예지·건전성관리(PHM)를 연구합니다. 기계·선박 엔진의 이상탐지, 고장 진단, 잔여수명(RUL) 예측을 다루며, 연구실이 새롭게 확장하는 분야입니다."
+  },
+  "tags": ["CBM", "PHM", "RUL", "predictive maintenance", "fault diagnosis"]
+}

@@ -1,0 +1,128 @@
+---
+import Base from "../layouts/Base.astro";
+import T from "../components/T.astro";
+import site from "../data/site.json";
+import { getCollection } from "astro:content";
+
+const research = (await getCollection("research")).sort((a, b) => a.id.localeCompare(b.id)).map((e) => e.data);
+
+const selected = (await getCollection("publications"))
+  .map((e) => e.data)
+  .filter((p) => p.selected)
+  .sort((a, b) => b.year - a.year);
+
+// Home shows only the latest few news; the full archive lives at /news.
+const news = (await getCollection("news"))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 4);
+---
+
+<Base>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="wrap">
+      <div class="eyebrow"><T en={site.pi.institution.en} ko={site.pi.institution.ko} /></div>
+      <h1>{site.name} · <T en={site.fullName} ko={site.fullNameKo} /></h1>
+      <p class="lead"><T en={site.statement.en} ko={site.statement.ko} /></p>
+      <div class="hero-actions">
+        <a class="btn" href="/publications/"><T en="Publications" ko="논문" /></a>
+        <a class="btn ghost" href="/people/"><T en="People" ko="구성원" /></a>
+        <a class="btn ghost" href={site.socials.scholar} target="_blank" rel="noopener">Google Scholar ↗</a>
+      </div>
+      <div class="stats">
+        {site.stats.map((s) => (
+          <div class="stat"><div class="n">{s.value}</div><div class="l"><T en={s.label.en} ko={s.label.ko} /></div></div>
+        ))}
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT / PI -->
+  <section id="about">
+    <div class="wrap about">
+      <div>
+        <div class="sec-label"><T en="Principal Investigator" ko="연구책임자" /></div>
+        <h2 class="sec-title"><T en={site.pi.name.en} ko={site.pi.name.ko} /></h2>
+        <p><T en={site.pi.bio.en} ko={site.pi.bio.ko} html /></p>
+        {site.pi.career.map((g) => (
+          <div class="cv-group">
+            <div class="cv-heading"><T en={g.heading.en} ko={g.heading.ko} /></div>
+            <ul class="cv-list">
+              {g.items.map((it) => (
+                <li>
+                  <span class="p">{it.period}</span>
+                  <span class="r"><T en={it.role.en} ko={it.role.ko} /></span>
+                  <span class="o"><T en={it.org.en} ko={it.org.ko} /></span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+      <div class="side">
+        <p><strong><T en={site.pi.title.en} ko={site.pi.title.ko} /></strong><br /><T en={site.pi.dept.en} ko={site.pi.dept.ko} /></p>
+        <p><T en={site.pi.office.en} ko={site.pi.office.ko} /></p>
+        <p><strong>Email</strong><br /><a href={`mailto:${site.pi.email}`}>{site.pi.email}</a></p>
+        <p><a href={site.socials.cv}><T en="Download CV (PDF) ↓" ko="CV 내려받기 (PDF) ↓" /></a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH -->
+  <section id="research">
+    <div class="wrap">
+      <div class="sec-label"><T en="What we work on" ko="연구 분야" /></div>
+      <h2 class="sec-title"><T en="Research" ko="연구" /></h2>
+      <div class="grid2">
+        {research.map((r) => (
+          <div class="card">
+            <h3><T en={r.title.en} ko={r.title.ko} /></h3>
+            <p><T en={r.blurb.en} ko={r.blurb.ko} /></p>
+            <div class="tags">{r.tags.map((t) => <span class="tag">{t}</span>)}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- SELECTED PUBLICATIONS -->
+  <section id="selected">
+    <div class="wrap">
+      <div class="sec-label"><T en="Selected work" ko="대표 연구" /></div>
+      <h2 class="sec-title"><T en="Featured publications" ko="대표 논문" /></h2>
+      {selected.map((p) => (
+        <div class="pub sel">
+          <span class="t">{p.title}</span>
+          <div class="a">{p.authors}</div>
+          <div class="v">{p.venue}</div>
+        </div>
+      ))}
+      <p style="margin-top:26px"><a href="/publications/"><T en="See all publications →" ko="전체 논문 보기 →" /></a></p>
+    </div>
+  </section>
+
+  <!-- NEWS -->
+  <section id="news" style="border-bottom:none">
+    <div class="wrap">
+      <div class="sec-label"><T en="Recent" ko="최근 소식" /></div>
+      <h2 class="sec-title"><T en="News" ko="소식" /></h2>
+      <ul class="news home-news">
+        {news.map((n) => {
+          const imgs = n.data.images ?? (n.data.image ? [n.data.image] : []);
+          return (
+            <li>
+              <div class="news-line"><span class="d">{n.data.date.getUTCFullYear()}</span><span class="news-title"><T en={n.data.title.en} ko={n.data.title.ko} /></span></div>
+              <div class="news-text"><T en={n.data.en} ko={n.data.ko} html /></div>
+              {imgs.length > 0 && (
+                <div class={imgs.length > 1 ? "news-imgs multi" : "news-imgs"}>
+                  {imgs.map((src) => <img src={src} alt={n.data.title.en} loading="lazy" onerror="this.style.display='none'" />)}
+                </div>
+              )}
+            </li>
+          );
+        })}
+      </ul>
+      <p style="margin-top:22px"><a href="/news/"><T en="See all news →" ko="전체 소식 보기 →" /></a></p>
+    </div>
+  </section>
+</Base>

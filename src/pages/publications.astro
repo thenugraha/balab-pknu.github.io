@@ -1,0 +1,46 @@
+---
+import Base from "../layouts/Base.astro";
+import T from "../components/T.astro";
+import { getCollection } from "astro:content";
+
+const publications = (await getCollection("publications")).sort((a, b) => a.id.localeCompare(b.id)).map((e) => e.data);
+
+const years = [...new Set(publications.map((p) => p.year))].sort((a, b) => b - a);
+const byYear = years.map((y) => ({
+  year: y,
+  items: publications.filter((p) => p.year === y),
+}));
+const total = publications.filter((p) => p.status === "published").length;
+---
+
+<Base title="Publications" description="Publications from BALAB, Pukyong National University.">
+  <header class="page-head">
+    <div class="wrap">
+      <div class="sec-label"><T en={`${total} journal articles`} ko={`저널 논문 ${total}편`} /></div>
+      <h1><T en="Publications" ko="논문" /></h1>
+      <p class="lead" style="margin-top:16px">
+        <T en="The full list is on" ko="전체 목록은" />
+        <a href="https://scholar.google.com/citations?user=KkeYol8AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar ↗</a><T en="." ko="에서 확인하세요." />
+        <T en="★ marks featured work." ko="★는 대표 논문입니다." />
+      </p>
+    </div>
+  </header>
+
+  <section style="border-bottom:none; padding-top:20px">
+    <div class="wrap">
+      {byYear.map((g) => (
+        <div>
+          <div class="pub-year">{g.year}</div>
+          {g.items.map((p) => (
+            <div class={p.selected ? "pub sel" : "pub"}>
+              {p.url ? <a class="t" href={p.url} target="_blank" rel="noopener">{p.title}</a> : <span class="t">{p.title}</span>}
+              {p.status === "under review" && <span class="badge"><T en="Under review" ko="심사중" /></span>}
+              <div class="a">{p.authors}</div>
+              {p.venue && <div class="v">{p.venue}</div>}
+            </div>
+          ))}
+        </div>
+      ))}
+    </div>
+  </section>
+</Base>

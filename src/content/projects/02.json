@@ -1,0 +1,21 @@
+{
+  "title": {
+    "en": "LLM agents for shipbuilding collaborative robots",
+    "ko": "조선 협동로봇을 위한 LLM 에이전트"
+  },
+  "funder": {
+    "en": "KOMERI consortium",
+    "ko": "한국조선해양기자재연구원(KOMERI) 컨소시엄"
+  },
+  "role": {
+    "en": "Participating institution (PKNU)",
+    "ko": "참여기관(부경대)"
+  },
+  "period": "2026 – present",
+  "status": "current",
+  "category": "National",
+  "blurb": {
+    "en": "We develop large-language-model agent modules within a collaborative-robot R&D program for the shipbuilding industry.",
+    "ko": "조선 산업용 협동로봇 R&D 과제에서 대규모 언어모델 에이전트 모듈을 개발합니다."
+  }
+}

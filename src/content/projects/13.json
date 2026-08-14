@@ -1,0 +1,21 @@
+{
+  "title": {
+    "en": "AI & Data Convergence for Maritime Decarbonization (Busan AI Innovation Cluster)",
+    "ko": "부산 혁신거점 AI·데이터 융합과제 (해운 탈탄소)"
+  },
+  "funder": {
+    "en": "NIPA · Busan IT Industry Promotion Agency (BIPA) — Busan AI Innovation Cluster",
+    "ko": "정보통신산업진흥원(NIPA)·부산정보산업진흥원(BIPA) — 부산 혁신거점"
+  },
+  "role": {
+    "en": "Participating institution (PKNU) — AI modeling",
+    "ko": "참여기관(부경대) — AI 모델링"
+  },
+  "period": "2024 – 2026",
+  "status": "current",
+  "category": "National",
+  "blurb": {
+    "en": "Building maritime-decarbonization datasets and AI models — carbon-emission prediction, ship energy-efficiency analysis, and route optimization — in a Busan innovation-cluster consortium led by Lab O2O.",
+    "ko": "랩오투원 주관 컨소시엄에서 해운 탈탄소 데이터셋과 AI 모델(탄소배출 예측·선박 에너지효율·최적항로)을 개발하는 부산 혁신거점 계속과제입니다."
+  }
+}

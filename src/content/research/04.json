@@ -1,0 +1,11 @@
+{
+  "title": {
+    "en": "LLM & Business Information Analytics",
+    "ko": "LLM·비즈니스 정보 분석"
+  },
+  "blurb": {
+    "en": "We extract structured insight from unstructured text such as customer reviews, medical-error records, and 10-K reports, using large language models and aspect-based analysis.",
+    "ko": "고객 리뷰, 의료 오류 기록, 10-K 보고서 같은 비정형 텍스트에서 대규모 언어모델(LLM)과 속성 기반 분석을 활용해 구조화된 통찰을 추출합니다."
+  },
+  "tags": ["LLM", "information extraction", "review analytics", "10-K"]
+}

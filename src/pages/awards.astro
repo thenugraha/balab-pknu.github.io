@@ -1,0 +1,52 @@
+---
+import Base from "../layouts/Base.astro";
+import T from "../components/T.astro";
+import { getCollection } from "astro:content";
+
+// Derived from the news collection: any news item carrying an `award` block
+// appears here. Add an award by adding the news item — never edit this page.
+const entries = (await getCollection("news"))
+  .filter((n) => n.data.award?.length)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .flatMap((n) => n.data.award.map((a) => ({ ...a, date: n.data.date, slug: n.slug })));
+
+const years = [...new Set(entries.map((a) => a.date.getUTCFullYear()))].sort((a, b) => b - a);
+const byYear = years.map((y) => ({ year: y, items: entries.filter((a) => a.date.getUTCFullYear() === y) }));
+---
+
+<Base title="Awards" description="Competition awards won by BALAB students, Pukyong National University.">
+  <header class="page-head">
+    <div class="wrap">
+      <div class="sec-label">
+        <T en={`${entries.length} awards`} ko={`수상 ${entries.length}건`} />
+      </div>
+      <h1><T en="Awards" ko="수상" /></h1>
+      <p class="lead" style="margin-top:16px">
+        <T
+          en="Prizes our students have won at data science and machine learning competitions. Each entry links to the full story in the news archive."
+          ko="BALAB 학생들이 데이터 사이언스·머신러닝 경진대회에서 받은 상입니다. 각 항목은 소식의 자세한 내용으로 연결됩니다."
+        />
+      </p>
+    </div>
+  </header>
+
+  <section style="border-bottom:none; padding-top:20px">
+    <div class="wrap">
+      {byYear.map((g) => (
+        <div>
+          <div class="pub-year">{g.year}</div>
+          {g.items.map((a) => (
+            <a class="award" href={`/news/#${a.slug}`}>
+              <span class="rank"><T en={a.rank.en} ko={a.rank.ko} /></span>
+              <span class="award-body">
+                <span class="t"><T en={a.competition.en} ko={a.competition.ko} /></span>
+                <span class="h"><T en={a.host.en} ko={a.host.ko} /></span>
+                <span class="m">{a.team ? `${a.team} — ${a.members}` : a.members}</span>
+              </span>
+            </a>
+          ))}
+        </div>
+      ))}
+    </div>
+  </section>
+</Base>

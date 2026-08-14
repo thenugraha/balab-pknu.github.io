@@ -1,0 +1,107 @@
+{
+  "name": "BALAB",
+  "fullName": "Business Analytics Lab",
+  "fullNameKo": "비즈니스 애널리틱스 연구실",
+  "statement": {
+    "en": "We apply machine learning and explainable AI to real industrial problems, with a focus on the trustworthiness, safety, and reliability of AI systems. Our work spans vessel fuel consumption and engine anomaly detection, semiconductor inspection, equipment prognostics, engineering design, software change prediction, and text analysis of corporate reports and customer reviews. Whatever the domain, we build models that show the evidence behind each prediction, so the people using them can verify it and act on it.",
+    "ko": "머신러닝과 설명가능한 AI를 실제 산업 문제에 적용하며, AI 시스템의 신뢰성·안전성·안정성에 중점을 둡니다. 선박 연료 소모량 예측과 엔진 이상탐지, 반도체 검사, 설비 고장예지, 공학 설계, 소프트웨어 변경 예측, 기업 보고서·고객 리뷰 텍스트 분석까지 다양한 산업 분야를 다루며, 어느 분야든 예측의 근거를 함께 제시해 쓰는 사람이 직접 확인하고 판단할 수 있는 모델을 만듭니다."
+  },
+  "pi": {
+    "name": { "en": "Jihwan Lee", "ko": "이지환" },
+    "title": { "en": "Associate Professor", "ko": "부교수" },
+    "dept": { "en": "Division of Systems Management and Engineering", "ko": "시스템경영·안전공학부" },
+    "institution": { "en": "Pukyong National University", "ko": "부경대학교" },
+    "office": {
+      "en": "Office B21-603, 45 Yongso-ro, Nam-gu, Busan, South Korea",
+      "ko": "부산광역시 남구 용소로 45, B21-603호"
+    },
+    "email": "jihwan@pknu.ac.kr",
+    "photo": "",
+    "bio": {
+      "en": "Jihwan Lee is an Associate Professor in the Division of Systems Management and Engineering at Pukyong National University, where he leads <strong>BALAB</strong> (Business Analytics Lab). His doctoral work developed a Bayesian network approach to engineering change management; his research has since broadened into machine learning applications across industry. Recent work centres on diagnosis from vessel operating data, petroleum exploration analytics, and business document analysis with large language models.",
+      "ko": "이지환 교수는 부경대학교 시스템경영·안전공학부 부교수로 <strong>BALAB</strong>(비즈니스 애널리틱스 연구실)를 이끌고 있습니다. 박사과정에서는 베이지안 네트워크를 이용한 공학 설계변경 관리를 연구했고, 이후 관심 분야를 산업 전반의 머신러닝 응용으로 넓혔습니다. 최근에는 선박 운항 데이터 기반 진단, 석유 탐사 데이터 분석, 그리고 대규모 언어모델(LLM)을 활용한 비즈니스 문서 분석을 주로 다룹니다."
+    },
+    "career": [
+      {
+        "heading": { "en": "Appointments", "ko": "경력" },
+        "items": [
+          {
+            "period": "2024.08–",
+            "role": { "en": "Visiting Scholar", "ko": "방문학자" },
+            "org": { "en": "Portland State University, Engineering & Technology Management", "ko": "포틀랜드 주립대학교 공학기술경영학과" }
+          },
+          {
+            "period": "2022.09–",
+            "role": { "en": "Associate Professor", "ko": "부교수" },
+            "org": { "en": "Pukyong National University, Systems Management & Engineering", "ko": "부경대학교 시스템경영·안전공학부" }
+          },
+          {
+            "period": "2017.09–2022.08",
+            "role": { "en": "Assistant Professor", "ko": "조교수" },
+            "org": { "en": "Pukyong National University, Systems Management & Engineering", "ko": "부경대학교 시스템경영·안전공학부" }
+          },
+          {
+            "period": "2016.02–2017.08",
+            "role": { "en": "Research Professor", "ko": "연구교수" },
+            "org": { "en": "Hankuk University of Foreign Studies, Industrial & Management Engineering", "ko": "한국외국어대학교 산업경영공학과" }
+          },
+          {
+            "period": "2015.09–2016.02",
+            "role": { "en": "Research Fellow", "ko": "연구원" },
+            "org": { "en": "Seoul National University, Sustainable Innovation Systems Research Institute", "ko": "서울대학교 지속가능혁신시스템연구소" }
+          }
+        ]
+      },
+      {
+        "heading": { "en": "Education", "ko": "학력" },
+        "items": [
+          {
+            "period": "2008.03–2015.08",
+            "role": { "en": "Ph.D., Industrial Engineering", "ko": "공학박사, 산업공학" },
+            "org": { "en": "Seoul National University — advisor: Yoo S. Hong", "ko": "서울대학교 — 지도교수 홍유석" }
+          },
+          {
+            "period": "2004.03–2008.02",
+            "role": { "en": "B.S., Industrial Engineering", "ko": "공학사, 산업공학" },
+            "org": { "en": "Seoul National University", "ko": "서울대학교" }
+          }
+        ]
+      },
+      {
+        "heading": { "en": "Advisory", "ko": "자문" },
+        "items": [
+          {
+            "period": "2021.09–",
+            "role": { "en": "Technical Advisor", "ko": "기술자문" },
+            "org": { "en": "FutureConnect (LiivFarm) — smart farm control algorithms", "ko": "FutureConnect (LiivFarm) — 스마트팜 제어 알고리즘" }
+          },
+          {
+            "period": "2016.09–2020.09",
+            "role": { "en": "Technical Advisor", "ko": "기술자문" },
+            "org": { "en": "Bringprice.com — flight search algorithms", "ko": "Bringprice.com — 항공권 검색 알고리즘" }
+          }
+        ]
+      }
+    ]
+  },
+  "stats": [
+    { "value": "740+", "label": { "en": "Citations", "ko": "피인용" } },
+    { "value": "15", "label": { "en": "h-index", "ko": "h-지수" } },
+    { "value": "20", "label": { "en": "i10-index", "ko": "i10-지수" } }
+  ],
+  "nav": [
+    { "label": { "en": "Home", "ko": "홈" }, "href": "/" },
+    { "label": { "en": "Research", "ko": "연구" }, "href": "/#research" },
+    { "label": { "en": "Publications", "ko": "논문" }, "href": "/publications/" },
+    { "label": { "en": "Projects", "ko": "프로젝트" }, "href": "/projects/" },
+    { "label": { "en": "People", "ko": "구성원" }, "href": "/people/" },
+    { "label": { "en": "News", "ko": "소식" }, "href": "/news/" },
+    { "label": { "en": "Awards", "ko": "수상" }, "href": "/awards/" },
+    { "label": { "en": "CV", "ko": "CV" }, "href": "/cv/JihwanLee_CV.pdf" }
+  ],
+  "socials": {
+    "email": "jihwan@pknu.ac.kr",
+    "scholar": "https://scholar.google.com/citations?user=KkeYol8AAAAJ&hl=en",
+    "cv": "/cv/JihwanLee_CV.pdf"
+  }
+}

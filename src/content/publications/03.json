@@ -1,0 +1,13 @@
+{
+  "year": 2025,
+  "status": "published",
+  "selected": false,
+  "title": "XAI-Driven Contamination for Self-Supervised Denoising with Pixel-Level Anomaly Detection in Seismic Data",
+  "authors": "G. Antariksa, A. Koeshidayatullah, S. Das, J. Lee",
+  "venue": "Journal of Applied Geophysics, 238, 105723",
+  "url": "https://doi.org/10.1016/j.jappgeo.2025.105723",
+  "tags": [
+    "subsurface",
+    "xai"
+  ]
+}

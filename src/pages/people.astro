@@ -1,0 +1,83 @@
+---
+import Base from "../layouts/Base.astro";
+import T from "../components/T.astro";
+import site from "../data/site.json";
+import { getCollection } from "astro:content";
+
+const team = (await getCollection("team")).sort((a, b) => a.id.localeCompare(b.id)).map((e) => e.data);
+const alumni = (await getCollection("alumni")).sort((a, b) => a.id.localeCompare(b.id)).map((e) => e.data);
+
+const initials = (name) => name.split(" ").map((w) => w[0]).slice(0, 2).join("").toUpperCase();
+---
+
+<Base title="People" description="Members of BALAB, Pukyong National University.">
+  <header class="page-head">
+    <div class="wrap">
+      <div class="sec-label">Business Analytics Lab</div>
+      <h1><T en="People" ko="구성원" /></h1>
+    </div>
+  </header>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-label"><T en="Principal Investigator" ko="연구책임자" /></div>
+      <div class="person">
+        <div class="avatar">
+          {site.pi.photo ? <img src={site.pi.photo} alt={site.pi.name.en} loading="lazy" /> : initials(site.pi.name.en)}
+        </div>
+        <div>
+          <div class="nm"><T en={site.pi.name.en} ko={site.pi.name.ko} /></div>
+          <div class="ro"><T en={site.pi.title.en} ko={site.pi.title.ko} /></div>
+          <div class="fo"><T en={site.pi.dept.en} ko={site.pi.dept.ko} />, <T en={site.pi.institution.en} ko={site.pi.institution.ko} /> · <a href={`mailto:${site.pi.email}`}>{site.pi.email}</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-label"><T en="Members" ko="구성원" /></div>
+      <h2 class="sec-title"><T en="Researchers" ko="연구원" /></h2>
+      <div class="people">
+        {team.map((m) => (
+          <div class="person">
+            <div class="avatar">
+              {m.photo ? <img src={m.photo} alt={m.name.en} loading="lazy" /> : initials(m.name.en)}
+            </div>
+            <div>
+              <div class="nm"><T en={m.name.en} ko={m.name.ko} /></div>
+              <div class="ro"><T en={m.role.en} ko={m.role.ko} /></div>
+              <div class="fo"><T en={m.focus.en} ko={m.focus.ko} /></div>
+              {m.email && <div class="em"><a href={`mailto:${m.email}`}>{m.email}</a></div>}
+            </div>
+          </div>
+        ))}
+      </div>
+      <p style="margin-top:30px" class="lead">
+        <T
+          en="Interested in joining? We welcome motivated students in applied machine learning and explainable AI."
+          ko="함께하고 싶으신가요? 응용 머신러닝과 설명가능 AI에 열정 있는 학생을 환영합니다."
+        />
+        <a href={`mailto:${site.pi.email}`}><T en={`Email ${site.pi.name.en}`} ko={`${site.pi.name.ko} 교수에게 이메일을 보내주세요`} /></a>.
+      </p>
+    </div>
+  </section>
+
+  {alumni.length > 0 && (
+    <section style="border-bottom:none">
+      <div class="wrap">
+        <div class="sec-label"><T en="Graduated" ko="졸업생" /></div>
+        <h2 class="sec-title"><T en="Alumni" ko="동문" /></h2>
+        <ul class="alumni">
+          {alumni.map((a) => (
+            <li>
+              <span class="nm"><T en={a.name.en} ko={a.name.ko} /></span>
+              <span class="deg"><T en={a.degree.en} ko={a.degree.ko} /></span>
+              {a.now && <span class="now"><T en={a.now.en} ko={a.now.ko} /></span>}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  )}
+</Base>

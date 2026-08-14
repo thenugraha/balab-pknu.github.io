@@ -1,0 +1,132 @@
+---
+import "../styles/global.css";
+import T from "../components/T.astro";
+import site from "../data/site.json";
+const { title, description } = Astro.props;
+const pageTitle = title ? `${title} · ${site.name}` : `${site.name} — ${site.fullName}`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description ?? site.statement.en} />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Set language before first paint to avoid a flash of the wrong language. -->
+    <script is:inline>
+      (function () {
+        var stored = localStorage.getItem("balab-lang");
+        var lang = stored || ((navigator.language || "").toLowerCase().indexOf("ko") === 0 ? "ko" : "en");
+        document.documentElement.setAttribute("data-lang", lang);
+        document.documentElement.setAttribute("lang", lang);
+      })();
+    </script>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="wrap nav-inner">
+        <a class="brand" href="/">
+          <img class="brand-mark" src="/img/balab-mark.png" alt="BALAB logo" width="34" height="34" />
+          <span>{site.name}<span class="dot">.</span></span>
+        </a>
+        <div class="nav-links">
+          {site.nav.map((n) => <a href={n.href}><T en={n.label.en} ko={n.label.ko} /></a>)}
+        </div>
+        <div class="lang-toggle" role="group" aria-label="Language">
+          <button type="button" data-setlang="en" aria-label="English">EN</button>
+          <button type="button" data-setlang="ko" aria-label="한국어">한글</button>
+        </div>
+      </div>
+    </nav>
+
+    <slot />
+
+    <footer>
+      <div class="wrap foot-inner">
+        <div class="foot-brand">
+          <img src="/img/balab-mark.png" alt="BALAB logo" width="30" height="30" />
+          <span>© {new Date().getFullYear()} {site.name} — <T en={site.fullName} ko={site.fullNameKo} />, <T en={site.pi.institution.en} ko={site.pi.institution.ko} /></span>
+        </div>
+        <div class="foot-links">
+          <a href={`mailto:${site.socials.email}`}><T en="Email" ko="이메일" /></a>
+          <a href={site.socials.scholar} target="_blank" rel="noopener">Google Scholar</a>
+          <a href={site.socials.cv}>CV</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Click any news photo to view it full size. Native <dialog> gives us
+         Esc-to-close and focus trapping for free. -->
+    <dialog class="lightbox" aria-label="Photo viewer">
+      <button class="lb-close" type="button" aria-label="Close">✕</button>
+      <button class="lb-prev lb-nav" type="button" aria-label="Previous photo">‹</button>
+      <img alt="" />
+      <button class="lb-next lb-nav" type="button" aria-label="Next photo">›</button>
+      <div class="lb-count" aria-live="polite"></div>
+    </dialog>
+
+    <script is:inline>
+      document.addEventListener("click", function (e) {
+        var b = e.target.closest("[data-setlang]");
+        if (!b) return;
+        var lang = b.getAttribute("data-setlang");
+        document.documentElement.setAttribute("data-lang", lang);
+        document.documentElement.setAttribute("lang", lang);
+        localStorage.setItem("balab-lang", lang);
+      });
+    </script>
+
+    <script is:inline>
+      (function () {
+        var box = document.querySelector(".lightbox");
+        if (!box || !box.showModal) return; // no <dialog> support → thumbnails still work
+        var img = box.querySelector("img");
+        var count = box.querySelector(".lb-count");
+        var prev = box.querySelector(".lb-prev");
+        var next = box.querySelector(".lb-next");
+        var group = [];
+        var i = 0;
+
+        function show(n) {
+          i = (n + group.length) % group.length;
+          var src = group[i];
+          img.src = src.src;
+          img.alt = src.alt;
+          var many = group.length > 1;
+          prev.hidden = next.hidden = count.hidden = !many;
+          if (many) count.textContent = i + 1 + " / " + group.length;
+        }
+
+        document.addEventListener("click", function (e) {
+          var t = e.target;
+          if (t.tagName === "IMG" && t.closest(".news-imgs")) {
+            // the gallery this photo belongs to, so arrows step through siblings
+            group = [].slice.call(t.closest(".news-imgs").querySelectorAll("img"));
+            show(group.indexOf(t));
+            box.showModal();
+          }
+        });
+
+        prev.addEventListener("click", function () { show(i - 1); });
+        next.addEventListener("click", function () { show(i + 1); });
+        box.querySelector(".lb-close").addEventListener("click", function () { box.close(); });
+        // clicking the backdrop (anywhere that isn't the photo or a button) closes
+        box.addEventListener("click", function (e) { if (e.target === box) box.close(); });
+        box.addEventListener("keydown", function (e) {
+          if (e.key === "ArrowLeft") { e.preventDefault(); show(i - 1); }
+          if (e.key === "ArrowRight") { e.preventDefault(); show(i + 1); }
+        });
+        // drop the src on close so a reopened lightbox never flashes the old photo
+        box.addEventListener("close", function () { img.removeAttribute("src"); });
+      })();
+    </script>
+  </body>
+</html>

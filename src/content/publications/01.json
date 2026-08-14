@@ -1,0 +1,9 @@
+{
+  "year": 2025,
+  "status": "published",
+  "selected": true,
+  "title": "Cooperative Neural Networks for Inverse Design: Integrating Denoising Autoencoder and Surrogate Model for Partial Design Variable Imputation",
+  "authors": "A. Nugraha, H. Kwon, G. Park, J. Lee",
+  "venue": "Engineering Applications of Artificial Intelligence, 162, 112453",
+  "url": "https://doi.org/10.1016/j.engappai.2025.112453"
+}

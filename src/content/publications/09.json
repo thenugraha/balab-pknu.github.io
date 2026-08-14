@@ -1,0 +1,12 @@
+{
+  "year": 2023,
+  "status": "published",
+  "selected": false,
+  "title": "Feature Attribution Analysis to Quantify the Impact of Oceanographic and Maneuverability Factors on Vessel Shaft Power Using Explainable Tree-Based Model",
+  "authors": "D. Kim, M. P. Handayani, S. Lee, J. Lee",
+  "venue": "Sensors, 23(3), 1072",
+  "tags": [
+    "maritime",
+    "xai"
+  ]
+}

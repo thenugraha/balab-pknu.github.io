@@ -1,0 +1,17 @@
+{
+  "title": {
+    "en": "Automated CII-Rating Calculation Web Service from Vessel Tracks",
+    "ko": "선박 항적 기반 CII 등급 자동 산정 웹서비스"
+  },
+  "funder": {
+    "en": "Busan Institute of S&T and Higher Education Promotion",
+    "ko": "부산과학기술고등교육진흥원(BISTEP)"
+  },
+  "role": {
+    "en": "Participant",
+    "ko": "참여연구원"
+  },
+  "period": "2023 – 2024",
+  "status": "completed",
+  "category": "National"
+}

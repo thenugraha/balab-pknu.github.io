@@ -1,0 +1,11 @@
+{
+  "title": {
+    "en": "Explainable & Trustworthy AI",
+    "ko": "설명가능하고 신뢰할 수 있는 AI"
+  },
+  "blurb": {
+    "en": "We make machine-learning decisions transparent, safe, and reliable. Our work covers feature attribution (SHAP and tree-based methods), interpretable models such as EBM, and the reliability of ML and LLM-agent systems.",
+    "ko": "머신러닝의 의사결정을 투명하고 안전하며 신뢰할 수 있게 만듭니다. 특성 기여도 분석(SHAP·트리 기반), 해석가능한 모델(EBM), ML·LLM 에이전트 시스템의 신뢰성을 연구합니다."
+  },
+  "tags": ["XAI", "SHAP", "reliability", "LLM agents"]
+}

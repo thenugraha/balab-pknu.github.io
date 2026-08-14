@@ -1,0 +1,22 @@
+{
+  "title": {
+    "en": "Explainable multi-sensor anomaly detection for polar navigation",
+    "ko": "극지 항법을 위한 설명가능한 다중센서 이상탐지"
+  },
+  "funder": {
+    "en": "Ministry of SMEs and Startups (SMTECH)",
+    "ko": "중소벤처기업부(SMTECH)"
+  },
+  "role": {
+    "en": "Participating institution (PKNU)",
+    "ko": "참여기관(부경대)"
+  },
+  "period": "2026 – present",
+  "status": "current",
+  "category": "National",
+  "featured": true,
+  "blurb": {
+    "en": "We develop the anomaly-detection and XAI modules of a gyro-based multi-sensor navigation stabilization system for polar environments.",
+    "ko": "극지 환경용 자이로 기반 다중센서 항법 안정화 시스템의 이상탐지·XAI 모듈을 개발합니다."
+  }
+}

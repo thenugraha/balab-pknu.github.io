@@ -1,0 +1,9 @@
+{
+  "year": 2025,
+  "status": "published",
+  "selected": false,
+  "title": "WSim4ABM: Agent-based Modelling Simulation Web service with Message-Broker middleware and Annotation processing library",
+  "authors": "D. Yeshitla, M. Kim, Y. Kim, J. Lee",
+  "venue": "SoftwareX, 30, 102173",
+  "url": "https://doi.org/10.1016/j.softx.2025.102173"
+}

@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.astro/
+logs/
+preview.pid
+npm-debug.log*
+
+# local working materials (not part of the site)
+Awards Photo.zip
+Awards List.xlsx
+54979592-2017-4A94-A7FE-B84A50F5B931.png
+PLAN_alfolio_old.md

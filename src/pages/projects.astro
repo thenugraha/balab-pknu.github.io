@@ -1,0 +1,87 @@
+---
+import Base from "../layouts/Base.astro";
+import T from "../components/T.astro";
+import { getCollection } from "astro:content";
+
+const projects = (await getCollection("projects")).sort((a, b) => a.id.localeCompare(b.id)).map((e) => e.data);
+
+const current = projects.filter((p) => p.status === "current");
+const national = projects.filter((p) => p.status !== "current" && p.category === "National");
+const industry = projects.filter((p) => p.status !== "current" && p.category === "Industry");
+---
+
+<Base title="Projects" description="Selected research and industry projects at BALAB.">
+  <header class="page-head">
+    <div class="wrap">
+      <div class="sec-label"><T en="Funded research" ko="연구 과제" /></div>
+      <h1><T en="Projects" ko="프로젝트" /></h1>
+      <p class="lead" style="margin-top:16px">
+        <T
+          en="Our funded work ranges from smart-maritime cloud platforms to explainable AI for manufacturing."
+          ko="스마트 해양 클라우드 플랫폼부터 제조 분야 설명가능 AI까지, 주요 국가·산업 과제입니다."
+        />
+      </p>
+    </div>
+  </header>
+
+  {current.length > 0 && (
+    <section>
+      <div class="wrap">
+        <div class="sec-label"><T en="Ongoing" ko="진행중" /></div>
+        <h2 class="sec-title"><T en="Current projects" ko="진행 중인 과제" /></h2>
+        {current.map((p) => (
+          <div class="proj">
+            <div class="proj-main">
+              <span class="proj-title"><T en={p.title.en} ko={p.title.ko} /></span>
+              {p.blurb && <div class="proj-blurb"><T en={p.blurb.en} ko={p.blurb.ko} /></div>}
+              <div class="proj-meta"><T en={p.funder.en} ko={p.funder.ko} /></div>
+            </div>
+            <div class="proj-side">
+              <span class="proj-period">{p.period}</span>
+              <span class="proj-role"><T en={p.role.en} ko={p.role.ko} /></span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  )}
+
+  <section>
+    <div class="wrap">
+      <div class="sec-label"><T en="Government-funded" ko="정부 지원" /></div>
+      <h2 class="sec-title"><T en="National research projects" ko="국가 연구과제" /></h2>
+      {national.map((p) => (
+        <div class={p.featured ? "proj feat" : "proj"}>
+          <div class="proj-main">
+            <span class="proj-title"><T en={p.title.en} ko={p.title.ko} /></span>
+            {p.blurb && <div class="proj-blurb"><T en={p.blurb.en} ko={p.blurb.ko} /></div>}
+            <div class="proj-meta"><T en={p.funder.en} ko={p.funder.ko} /></div>
+          </div>
+          <div class="proj-side">
+            <span class="proj-period">{p.period}</span>
+            <span class="proj-role"><T en={p.role.en} ko={p.role.ko} />{p.amount ? ` · ${p.amount}` : ""}</span>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section style="border-bottom:none">
+    <div class="wrap">
+      <div class="sec-label"><T en="Industry" ko="산업" /></div>
+      <h2 class="sec-title"><T en="Industry projects" ko="산업체 과제" /></h2>
+      {industry.map((p) => (
+        <div class="proj">
+          <div class="proj-main">
+            <span class="proj-title"><T en={p.title.en} ko={p.title.ko} /></span>
+            <div class="proj-meta"><T en={p.funder.en} ko={p.funder.ko} /></div>
+          </div>
+          <div class="proj-side">
+            <span class="proj-period">{p.period}</span>
+            <span class="proj-role"><T en={p.role.en} ko={p.role.ko} />{p.amount ? ` · ${p.amount}` : ""}</span>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+</Base>

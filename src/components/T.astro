@@ -1,0 +1,19 @@
+---
+// Bilingual text helper. Renders both English and Korean into the DOM;
+// CSS (see global.css) shows only the language matching <html data-lang>.
+// Usage:
+//   <T en="Home" ko="홈" />
+//   <T en={item.en} ko={item.ko} html />   ← when the strings contain markup
+const { en, ko, html = false } = Astro.props;
+---
+{
+  html ? (
+    <>
+      <span class="t-i18n" data-l="en" set:html={en} /><span class="t-i18n" data-l="ko" set:html={ko} />
+    </>
+  ) : (
+    <>
+      <span class="t-i18n" data-l="en">{en}</span><span class="t-i18n" data-l="ko">{ko}</span>
+    </>
+  )
+}

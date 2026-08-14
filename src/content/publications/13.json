@@ -1,0 +1,12 @@
+{
+  "year": 2021,
+  "status": "published",
+  "selected": true,
+  "title": "Explainable Anomaly Detection Framework for Maritime Main Engine Sensor Data",
+  "authors": "D. Kim, G. Antariksa, M. P. Handayani, S. Lee, J. Lee",
+  "venue": "Sensors, 21(5)",
+  "tags": [
+    "maritime",
+    "xai"
+  ]
+}
