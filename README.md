@@ -29,8 +29,8 @@ nginx 게이트웨이 `port_12011.conf` → `127.0.0.1:4002` 연결됨 → **호
 - `public/img/` — 이미지 (뉴스 `img/news/`, 구성원 사진 `img/people/`)
 
 ## 배포 — GitHub Pages (자동)
+- 저장소: `BALAB-PKNU/balab-pknu.github.io` → 공개 주소 **https://balab-pknu.github.io**
 - `main` 브랜치에 push하면 GitHub Actions(`.github/workflows/deploy.yml`)가 빌드·배포합니다.
-- 커스텀 도메인: **https://balab.paz.works** (`public/CNAME` + name.com DNS의 `balab` CNAME → `ralbu85.github.io`)
 - 저장소 Settings → Pages → Source가 **GitHub Actions**로 되어 있어야 합니다.
 
 ## 남은 것
