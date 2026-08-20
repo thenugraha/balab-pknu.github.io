@@ -71,7 +71,7 @@ const initials = (name) => name.split(" ").map((w) => w[0]).slice(0, 2).join("")
         <div class="people">
           {alumni.map((a) => (
             <div class="person">
-              <div class="avatar avatar-lg">
+              <div class="avatar">
                 {a.photo ? <img src={a.photo} alt={a.name.en} loading="lazy" /> : initials(a.name.en)}
               </div>
               <div>

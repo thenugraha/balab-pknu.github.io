@@ -161,10 +161,10 @@ section { padding: 64px 0; border-bottom: 1px solid var(--line); }
 .people { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
 .person { display: flex; gap: 16px; align-items: flex-start; padding: 16px 0; border-top: 1px solid var(--line); }
 .avatar {
-  width: 64px; height: 64px; border-radius: 50%; flex-shrink: 0;
+  width: 96px; height: 96px; border-radius: 50%; flex-shrink: 0;
   background: linear-gradient(135deg, var(--accent), var(--ink));
   color: var(--paper); display: grid; place-items: center;
-  font-family: var(--serif); font-size: 22px;
+  font-family: var(--serif); font-size: 30px;
   overflow: hidden;
 }
 /* member photo (from `photo` in src/content/team/NN.json); falls back to initials */
@@ -175,8 +175,7 @@ section { padding: 64px 0; border-bottom: 1px solid var(--line); }
 .person .em { font-size: 13.5px; margin-top: 2px; }
 .person .em a { color: var(--accent); }
 
-/* alumni — one card per graduate, larger portrait + thesis title */
-.avatar.avatar-lg { width: 96px; height: 96px; font-size: 30px; }
+/* alumni — one card per graduate, portrait + thesis title */
 .person .th { color: var(--ink-soft); font-size: 13px; font-style: italic; line-height: 1.5; margin-top: 6px; }
 
 /* news */
