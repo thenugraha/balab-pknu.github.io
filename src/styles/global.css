@@ -177,6 +177,11 @@ section { padding: 64px 0; border-bottom: 1px solid var(--line); }
 
 /* alumni — one card per graduate, portrait + thesis title */
 .person .th { color: var(--ink-soft); font-size: 13px; font-style: italic; line-height: 1.5; margin-top: 6px; }
+.person .th-label {
+  font-style: normal; font-weight: 600; font-size: 11px;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--accent-2); margin-right: 4px;
+}
 
 /* news */
 .news { padding: 0; margin: 0; }
