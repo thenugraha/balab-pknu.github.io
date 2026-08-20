@@ -1,5 +1,15 @@
 {
-  "name": { "en": "Gian Antariksa", "ko": "Gian Antariksa" },
-  "degree": { "en": "Ph.D., Data Engineering (2023)", "ko": "박사, 데이터공학 (2023)" },
-  "now": { "en": "Senior Data Scientist, Philip Morris International", "ko": "필립모리스 인터내셔널 시니어 데이터 사이언티스트" }
+  "name": {
+    "en": "Gian Antariksa",
+    "ko": "Gian Antariksa"
+  },
+  "degree": {
+    "en": "Ph.D., Data Engineering (2023)",
+    "ko": "박사, 데이터공학 (2023)"
+  },
+  "now": {
+    "en": "Senior Data Scientist, Philip Morris International",
+    "ko": "필립모리스 인터내셔널 시니어 데이터 사이언티스트"
+  },
+  "photo": "/img/people/gian-antariksa.jpg"
 }

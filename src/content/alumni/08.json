@@ -1,5 +1,15 @@
 {
-  "name": { "en": "Ahmed Hamdi Abdurhamn", "ko": "Ahmed Hamdi Abdurhamn" },
-  "degree": { "en": "Ph.D., Data Engineering (2023)", "ko": "박사, 데이터공학 (2023)" },
-  "now": { "en": "Assistant Professor, Dong-eui University", "ko": "동의대학교 조교수" }
+  "name": {
+    "en": "Ahmed Hamdi Abdurhamn",
+    "ko": "Ahmed Hamdi Abdurhamn"
+  },
+  "degree": {
+    "en": "Ph.D., Data Engineering (2023)",
+    "ko": "박사, 데이터공학 (2023)"
+  },
+  "now": {
+    "en": "Assistant Professor, Dong-eui University",
+    "ko": "동의대학교 조교수"
+  },
+  "photo": "/img/people/ahmed-hamdi.jpg"
 }

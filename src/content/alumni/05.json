@@ -1,5 +1,15 @@
 {
-  "name": { "en": "Sieun Kim", "ko": "김시은" },
-  "degree": { "en": "M.S., Data Engineering (2024)", "ko": "석사, 데이터공학 (2024)" },
-  "now": { "en": "Researcher, KOMERI", "ko": "한국조선해양기자재연구원(KOMERI) 연구원" }
+  "name": {
+    "en": "Sieun Kim",
+    "ko": "김시은"
+  },
+  "degree": {
+    "en": "M.S., Data Engineering (2024)",
+    "ko": "석사, 데이터공학 (2024)"
+  },
+  "now": {
+    "en": "Researcher, KOMERI",
+    "ko": "한국조선해양기자재연구원(KOMERI) 연구원"
+  },
+  "photo": "/img/people/sieun-kim.jpg"
 }

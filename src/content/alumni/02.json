@@ -1,5 +1,15 @@
 {
-  "name": { "en": "Mingyu Park", "ko": "박민규" },
-  "degree": { "en": "M.S., Data Engineering (2025)", "ko": "석사, 데이터공학 (2025)" },
-  "now": { "en": "Researcher, INEEJI", "ko": "(주)인이지 연구원" }
+  "name": {
+    "en": "Mingyu Park",
+    "ko": "박민규"
+  },
+  "degree": {
+    "en": "M.S., Data Engineering (2025)",
+    "ko": "석사, 데이터공학 (2025)"
+  },
+  "now": {
+    "en": "Researcher, INEEJI",
+    "ko": "(주)인이지 연구원"
+  },
+  "photo": "/img/people/mingyu-park.jpg"
 }

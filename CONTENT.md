@@ -48,7 +48,7 @@ npm run build     # dist/ 재생성 → 브라우저 강력 새로고침(Ctrl+Sh
 | 교수(PI) 카드 | `src/data/site.json` : `pi.*` (사진은 `pi.photo`) |
 | 구성원 1명 | `src/content/team/NN.json` — 파일 1개 = 사람 1명, 번호 순서 = 표시 순서 |
 | **구성원 사진** | 사진 파일을 `public/img/people/`에 넣고 해당 JSON의 `"photo": "/img/people/파일명.jpg"` 지정. 비워두면(`""`) 이니셜 원형 아바타가 placeholder로 표시됨. 정사각형 권장 |
-| 졸업생 | `src/content/alumni/NN.json` |
+| 졸업생 | `src/content/alumni/NN.json` — 사진은 구성원과 동일하게 `public/img/people/` + `"photo"` 필드 (비우면 이니셜 아바타) |
 
 ## 소식 (`/news`) · 수상 (`/awards`)
 

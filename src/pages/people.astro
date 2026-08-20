@@ -71,6 +71,9 @@ const initials = (name) => name.split(" ").map((w) => w[0]).slice(0, 2).join("")
         <ul class="alumni">
           {alumni.map((a) => (
             <li>
+              <span class="avatar avatar-sm">
+                {a.photo ? <img src={a.photo} alt={a.name.en} loading="lazy" /> : initials(a.name.en)}
+              </span>
               <span class="nm"><T en={a.name.en} ko={a.name.ko} /></span>
               <span class="deg"><T en={a.degree.en} ko={a.degree.ko} /></span>
               {a.now && <span class="now"><T en={a.now.en} ko={a.now.ko} /></span>}

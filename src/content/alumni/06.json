@@ -1,5 +1,15 @@
 {
-  "name": { "en": "Melia Putri Handayani", "ko": "Melia Putri Handayani" },
-  "degree": { "en": "Ph.D., Data Engineering (2024)", "ko": "박사, 데이터공학 (2024)" },
-  "now": { "en": "Senior Researcher, Monitech Co., Ltd.", "ko": "모니텍(주) 선임연구원" }
+  "name": {
+    "en": "Melia Putri Handayani",
+    "ko": "Melia Putri Handayani"
+  },
+  "degree": {
+    "en": "Ph.D., Data Engineering (2024)",
+    "ko": "박사, 데이터공학 (2024)"
+  },
+  "now": {
+    "en": "Senior Researcher, Monitech Co., Ltd.",
+    "ko": "모니텍(주) 선임연구원"
+  },
+  "photo": "/img/people/melia-handayani.jpg"
 }

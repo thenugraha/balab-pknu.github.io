@@ -1,5 +1,15 @@
 {
-  "name": { "en": "Hyeonji Jeong", "ko": "정현지" },
-  "degree": { "en": "M.S., Data Engineering (2025)", "ko": "석사, 데이터공학 (2025)" },
-  "now": { "en": "Senior Researcher, INNOGRID", "ko": "(주)이노그리드 선임연구원" }
+  "name": {
+    "en": "Hyeonji Jeong",
+    "ko": "정현지"
+  },
+  "degree": {
+    "en": "M.S., Data Engineering (2025)",
+    "ko": "석사, 데이터공학 (2025)"
+  },
+  "now": {
+    "en": "Senior Researcher, INNOGRID",
+    "ko": "(주)이노그리드 선임연구원"
+  },
+  "photo": "/img/people/hyeonji-jeong.jpg"
 }

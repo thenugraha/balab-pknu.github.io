@@ -96,6 +96,7 @@ const alumni = defineCollection({
     name: bilingual,
     degree: bilingual, // e.g. "M.S., Data Engineering (2026)"
     now: bilingual.optional(), // current position / destination, if known
+    photo: z.string().optional(), // e.g. "/img/people/name.jpg"; omit for initials avatar
   }),
 });
 
