@@ -1,4 +1,5 @@
 {
   "name": { "en": "Bongmin Cha", "ko": "차봉민" },
-  "degree": { "en": "M.S., Data Engineering (2026)", "ko": "석사, 데이터공학 (2026)" }
+  "degree": { "en": "M.S., Data Engineering (2026)", "ko": "석사, 데이터공학 (2026)" },
+  "now": { "en": "DX Solutions Co., Ltd.", "ko": "(주)디엑스솔루션즈" }
 }
