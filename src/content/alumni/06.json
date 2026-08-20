@@ -11,5 +11,9 @@
     "en": "Senior Researcher, Monitech Co., Ltd.",
     "ko": "모니텍(주) 선임연구원"
   },
-  "photo": "/img/people/melia-handayani.jpg"
+  "photo": "/img/people/melia-handayani.jpg",
+  "thesis": {
+    "en": "Maritime Data Analytics Using Explainable Artificial Intelligence for Energy-Efficient Shipping and Condition Monitoring of Marine Equipment",
+    "ko": "Maritime Data Analytics Using Explainable Artificial Intelligence for Energy-Efficient Shipping and Condition Monitoring of Marine Equipment"
+  }
 }

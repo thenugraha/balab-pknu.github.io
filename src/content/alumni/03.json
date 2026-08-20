@@ -11,5 +11,9 @@
     "en": "Senior Researcher, INNOGRID",
     "ko": "(주)이노그리드 선임연구원"
   },
-  "photo": "/img/people/hyeonji-jeong.jpg"
+  "photo": "/img/people/hyeonji-jeong.jpg",
+  "thesis": {
+    "en": "Prediction of Growth Days and Harvest Time for Caipira Lettuce in a Smart Farm Environment Using Object Detection",
+    "ko": "객체 탐지 기반 스마트팜 환경 내 카이피라(Caipira) 상추의 생장 일수 및 수확 시점 예측"
+  }
 }

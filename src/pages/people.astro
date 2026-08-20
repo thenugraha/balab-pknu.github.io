@@ -68,18 +68,21 @@ const initials = (name) => name.split(" ").map((w) => w[0]).slice(0, 2).join("")
       <div class="wrap">
         <div class="sec-label"><T en="Graduated" ko="졸업생" /></div>
         <h2 class="sec-title"><T en="Alumni" ko="동문" /></h2>
-        <ul class="alumni">
+        <div class="people">
           {alumni.map((a) => (
-            <li>
-              <span class="avatar avatar-sm">
+            <div class="person">
+              <div class="avatar avatar-lg">
                 {a.photo ? <img src={a.photo} alt={a.name.en} loading="lazy" /> : initials(a.name.en)}
-              </span>
-              <span class="nm"><T en={a.name.en} ko={a.name.ko} /></span>
-              <span class="deg"><T en={a.degree.en} ko={a.degree.ko} /></span>
-              {a.now && <span class="now"><T en={a.now.en} ko={a.now.ko} /></span>}
-            </li>
+              </div>
+              <div>
+                <div class="nm"><T en={a.name.en} ko={a.name.ko} /></div>
+                <div class="ro"><T en={a.degree.en} ko={a.degree.ko} /></div>
+                {a.now && <div class="fo"><T en={a.now.en} ko={a.now.ko} /></div>}
+                {a.thesis && <div class="th"><T en={`“${a.thesis.en}”`} ko={`“${a.thesis.ko}”`} /></div>}
+              </div>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
     </section>
   )}

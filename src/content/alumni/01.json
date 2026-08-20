@@ -11,5 +11,9 @@
     "en": "DX Solutions Co., Ltd.",
     "ko": "(주)디엑스솔루션즈"
   },
-  "photo": "/img/people/bongmin-cha.jpg"
+  "photo": "/img/people/bongmin-cha.jpg",
+  "thesis": {
+    "en": "Development of a Deep Learning-Based Fuel Consumption Prediction Model through Cross-Vessel Voyage Log Integration",
+    "ko": "Development of a Deep Learning-Based Fuel Consumption Prediction Model through Cross-Vessel Voyage Log Integration"
+  }
 }

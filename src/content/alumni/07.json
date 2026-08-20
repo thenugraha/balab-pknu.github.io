@@ -11,5 +11,9 @@
     "en": "Senior Data Scientist, Philip Morris International",
     "ko": "필립모리스 인터내셔널 시니어 데이터 사이언티스트"
   },
-  "photo": "/img/people/gian-antariksa.jpg"
+  "photo": "/img/people/gian-antariksa.jpg",
+  "thesis": {
+    "en": "Improving Geological Interpretation and Prediction for Hydrocarbon Exploration using ML-based Approach",
+    "ko": "Improving Geological Interpretation and Prediction for Hydrocarbon Exploration using ML-based Approach"
+  }
 }

@@ -11,5 +11,9 @@
     "en": "Assistant Professor, Dong-eui University",
     "ko": "동의대학교 조교수"
   },
-  "photo": "/img/people/ahmed-hamdi.jpg"
+  "photo": "/img/people/ahmed-hamdi.jpg",
+  "thesis": {
+    "en": "Deep Learning-based Approach to Software Changes Recommendation with Consideration for Propagation Effects in Large Software System",
+    "ko": "Deep Learning-based Approach to Software Changes Recommendation with Consideration for Propagation Effects in Large Software System"
+  }
 }

@@ -1,5 +1,18 @@
 {
-  "name": { "en": "Dayeoung Yun", "ko": "윤다영" },
-  "degree": { "en": "M.S., Data Engineering (2025)", "ko": "석사, 데이터공학 (2025)" },
-  "now": { "en": "Manager, Geumgang Bangjae Co., Ltd.", "ko": "(주)금강방재 과장" }
+  "name": {
+    "en": "Dayeoung Yun",
+    "ko": "윤다영"
+  },
+  "degree": {
+    "en": "M.S., Data Engineering (2025)",
+    "ko": "석사, 데이터공학 (2025)"
+  },
+  "now": {
+    "en": "Manager, Geumgang Bangjae Co., Ltd.",
+    "ko": "(주)금강방재 과장"
+  },
+  "thesis": {
+    "en": "Enhancing the Accuracy of Photovoltaic Cell Defect Detection Models through XAI-Based Image Re-Labeling",
+    "ko": "XAI 기반 이미지 재라벨링을 통한 태양광 셀 불량 검출 모델 정확도 향상 연구"
+  }
 }

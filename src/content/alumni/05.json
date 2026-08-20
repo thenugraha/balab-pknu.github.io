@@ -11,5 +11,9 @@
     "en": "Researcher, KOMERI",
     "ko": "한국조선해양기자재연구원(KOMERI) 연구원"
   },
-  "photo": "/img/people/sieun-kim.jpg"
+  "photo": "/img/people/sieun-kim.jpg",
+  "thesis": {
+    "en": "Analysis of Medical Device Use Error in the Manufacturer and User Facility Device Experience (MAUDE) Database with GPT and BERTopic",
+    "ko": "Analysis of Medical Device Use Error in the Manufacturer and User Facility Device Experience (MAUDE) Database with GPT and BERTopic"
+  }
 }

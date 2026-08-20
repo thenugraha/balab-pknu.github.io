@@ -11,5 +11,9 @@
     "en": "Researcher, BISTEP",
     "ko": "부산과학기술고등교육진흥원(BISTEP) 연구원"
   },
-  "photo": "/img/people/hyunju-kim.jpg"
+  "photo": "/img/people/hyunju-kim.jpg",
+  "thesis": {
+    "en": "Prediction of Vessel Fuel Consumption Using Explainable Artificial Intelligence (XAI)",
+    "ko": "설명가능한 인공지능(XAI)을 활용한 선박 연료 소모량 예측"
+  }
 }

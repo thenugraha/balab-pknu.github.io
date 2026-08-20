@@ -11,5 +11,9 @@
     "en": "Researcher, INEEJI",
     "ko": "(주)인이지 연구원"
   },
-  "photo": "/img/people/mingyu-park.jpg"
+  "photo": "/img/people/mingyu-park.jpg",
+  "thesis": {
+    "en": "Development of an FTA-BiLSTM Based Ship Fuel Consumption Prediction Model Utilizing Available Variables in the Voyage Planning Stage",
+    "ko": "운항 계획 단계 가용 변수를 활용한 FTA-BiLSTM 기반 선박 연료 소모량 예측 모델 개발"
+  }
 }

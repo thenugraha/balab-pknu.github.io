@@ -175,13 +175,9 @@ section { padding: 64px 0; border-bottom: 1px solid var(--line); }
 .person .em { font-size: 13.5px; margin-top: 2px; }
 .person .em a { color: var(--accent); }
 
-/* alumni */
-.alumni { list-style: none; padding: 0; margin: 0; }
-.alumni li { padding: 12px 0; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 4px 14px; align-items: center; }
-.avatar.avatar-sm { width: 44px; height: 44px; font-size: 16px; }
-.alumni .nm { font-weight: 600; color: var(--ink); }
-.alumni .deg { color: var(--ink-soft); font-size: 14.5px; }
-.alumni .now { color: var(--accent); font-size: 13.5px; }
+/* alumni — one card per graduate, larger portrait + thesis title */
+.avatar.avatar-lg { width: 96px; height: 96px; font-size: 30px; }
+.person .th { color: var(--ink-soft); font-size: 13px; font-style: italic; line-height: 1.5; margin-top: 6px; }
 
 /* news */
 .news { padding: 0; margin: 0; }

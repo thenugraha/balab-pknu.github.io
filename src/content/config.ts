@@ -97,6 +97,7 @@ const alumni = defineCollection({
     degree: bilingual, // e.g. "M.S., Data Engineering (2026)"
     now: bilingual.optional(), // current position / destination, if known
     photo: z.string().optional(), // e.g. "/img/people/name.jpg"; omit for initials avatar
+    thesis: bilingual.optional(), // dissertation title; official language kept in both fields when no Korean title exists
   }),
 });
 
